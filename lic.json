@@ -1,0 +1,16 @@
+{
+    "Apache License 2.0": [
+        "https://img.shields.io/badge/License-Apache_2.0-blue.svg",
+        "https://opensource.org/licenses/Apache-2.0"],
+    "GNU General Public License": "Hello",
+    "MIT License": "Hello",
+    "BSD 2-Clause \"Simplified\"": "Hello",
+    "BSD 3-Clause \"New\" or \"Revised\" License Boost Software License 1.0": "Hello",
+    "Creative Commons Zero v1.0 Universal": "Hello",
+    "Eclipse Public License 2.0": "Hello",
+    "GNU Affero General Public License v3.0": "Hello",
+    "GNU General Public License v2.0": "Hello",
+    "GNU Lesser General Public License v2.1": "Hello",
+    "Mozilla Public License 2.0": "Hello",
+    "The Unlicense": "Hello"
+}

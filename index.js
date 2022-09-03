@@ -1,8 +1,3 @@
-// Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-
-
-
-
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -24,24 +19,55 @@ const questions = [
       {
         type: 'input',
         name: 'install',
-        message: 'How does the user install the project?',
+        message: 'Enter install instructions: ',
       },
       {
         type: 'input',
         name: 'usage',
-        message: 'Briefly describe the usage for the project:',
+        message: 'Enter usage information: ',
       },
       {
         type: 'input',
         name: 'test',
-        message: 'How can this app be tested?',
+        message: 'Enter test instructions: ',
       },
       {
         type: 'input',
         name: 'contribute',
-        message: 'What are the contribution guidelines?',
+        message: 'Enter contribution guidelines: ',
+      },
+      {
+        type: 'input',
+        name: 'github',
+        message: 'Enter github user name: ',
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'Enter email: ',
+      },
+      {
+        type: 'list',
+        name: 'license',
+        message: 'What is the license?',
+        choices: [
+        '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',
+        'Apache License 2.0',
+        'GNU General Public License',
+        'MIT License',
+        'BSD 2-Clause "Simplified"',
+        'BSD 3-Clause "New" or "Revised" License', 
+        'Boost Software License 1.0',
+        'Creative Commons Zero v1.0 Universal',
+        'Eclipse Public License 2.0',
+        'GNU Affero General Public License v3.0', 
+        'GNU General Public License v2.0',
+        'GNU Lesser General Public License v2.1',
+        'Mozilla Public License 2.0', 
+        'The Unlicense'],
       },
     ];
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, answers) {
@@ -51,7 +77,14 @@ function writeToFile(fileName, answers) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
+
+
+
+  // .then(result => gen.renderLicenseBadge(result)) 
+    // .then(function (answers) { return gen.renderLicenseBadge(answers) })
     .then(answers => writeToFile('read.md', gen.generateMD(answers)))
+    
+
     .then(() => console.log('Successfully wrote to read.md'))
     .catch((err) => console.error(err));
 }
