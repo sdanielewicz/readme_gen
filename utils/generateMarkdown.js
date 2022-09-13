@@ -41,7 +41,7 @@ function generateMD ({title, description, install, usage, test, contribute, gith
    const renderedLink = renderLicenseLink(license);
    let githubConcat = ("https://github.com/" + github);
 
-   const md = `# Title: ${title} [![License](${renderedBadge})](${renderedLink})
+   const md = `#${title} [![License](${renderedBadge})](${renderedLink})
    ## Table of Contents:
    * [Description](#description)
    * [Install](#install)
